@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    var fruits : [Fruit] = fruitData
+    
     var body: some View {
-        VStack {
-            OnboardingView()
-        }
+        NavigationStack{
+            
+            List(fruits.shuffled()) { item in
+              FruitRowCell(fruit: item)
+                    .padding(.vertical, 4)
+                
+            }.listRowSpacing(10)
+                .navigationTitle("Fruits")
+                .navigationBarTitleDisplayMode(.automatic)
+            
+           
+            
+        }//NAVIGATION
+        
     }
 }
 

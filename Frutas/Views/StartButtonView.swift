@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct StartButtonView: View {
-    
+    @AppStorage("isOnboardingView") var isOnboarding: Bool = true
+
     var body: some View {
         
-        Button{
-            
+        Button {
+            isOnboarding = false
         } label: {
             Text("Start")
             Image(systemName: "arrow.right.circle")

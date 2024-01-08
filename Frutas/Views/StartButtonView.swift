@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct StartButtonView: View {
-    @AppStorage("isOnboardingView") var isOnboarding: Bool = true
+    
+    @AppStorage("isOnboardingView2") var isOnboarding: Bool?
 
     var body: some View {
         

@@ -14,6 +14,7 @@
 		8C52440D2B4B7570000EF274 /* FruitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52440C2B4B7570000EF274 /* FruitCardView.swift */; };
 		8C52440F2B4B76D2000EF274 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C52440E2B4B76D2000EF274 /* ColorExtension.swift */; };
 		8C5244112B4B7D92000EF274 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5244102B4B7D92000EF274 /* StartButtonView.swift */; };
+		8C5244132B4B8132000EF274 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5244122B4B8132000EF274 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8C52440C2B4B7570000EF274 /* FruitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCardView.swift; sourceTree = "<group>"; };
 		8C52440E2B4B76D2000EF274 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		8C5244102B4B7D92000EF274 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		8C5244122B4B8132000EF274 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				8C5243FB2B4B7181000EF274 /* FrutasApp.swift */,
 				8C5243FD2B4B7181000EF274 /* ContentView.swift */,
+				8C5244122B4B8132000EF274 /* OnboardingView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				8C52440D2B4B7570000EF274 /* FruitCardView.swift in Sources */,
 				8C5243FE2B4B7181000EF274 /* ContentView.swift in Sources */,
 				8C5243FC2B4B7181000EF274 /* FrutasApp.swift in Sources */,
+				8C5244132B4B8132000EF274 /* OnboardingView.swift in Sources */,
 				8C5244112B4B7D92000EF274 /* StartButtonView.swift in Sources */,
 				8C52440F2B4B76D2000EF274 /* ColorExtension.swift in Sources */,
 			);

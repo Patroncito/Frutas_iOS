@@ -51,6 +51,7 @@ struct FruitDetailView: View {
             
 
         } //NAVIGATION STACK
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }

@@ -8,11 +8,44 @@
 import SwiftUI
 
 struct SettingsRowView: View {
+    
+    var name : String
+    var content : String? = nil
+    var linkLabel : String? = nil
+    var linkDestination : String? = nil
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+        VStack {
+            Divider().padding(.vertical, 4)
+            HStack{
+                Text(name)
+                    .foregroundStyle(.gray)
+                Spacer()
+                if (content != nil ) {
+                    Text(content!)
+                        .bold()
+                } else if (linkLabel != nil && linkDestination != nil){
+                   
+                    Link(linkLabel!, destination: URL(string: linkDestination!)!)
+                        .bold()
+                    Image(systemName: "arrow.up.right.square").foregroundStyle(.pink)
+                } else {
+                    EmptyView()
+                }
+            }
+        }
+
     }
 }
 
 #Preview {
-    SettingsRowView()
+    GroupBox{
+        SettingsRowView(name: "Version",content: "1.0.1")
+        
+            SettingsRowView(name: "Version",content: "1.0.1")
+            
+        SettingsRowView(name: "Developer", linkLabel: "WebSite", linkDestination: "https://github.com/")
+
+    }.padding(.horizontal, 15)
 }

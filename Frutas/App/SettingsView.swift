@@ -10,6 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment (\.dismiss) var isPresented
+    @AppStorage("isOnboardingView2") var isOnboarding: Bool = false
+    
     var body: some View {
         
         NavigationStack {
@@ -35,7 +37,60 @@ struct SettingsView: View {
                     
                 }
                 
-            }.navigationTitle("Settings")
+                //MARK: SECTION 2
+                
+                GroupBox(label: SettingsLabelView(labelText: "customization", labelImage: "paintbrush"), content: {
+                    
+                    Divider().padding(.vertical, 4)
+                    Text("If you want restar the application by toggle the switch in thix box.")
+                        .font(.footnote)
+                        .padding(.vertical, 10)
+                        .frame(minHeight: 60)
+                        .layoutPriority(1)
+                        .multilineTextAlignment(.leading)
+                    
+                    Toggle(isOn: $isOnboarding) {
+                        if isOnboarding {
+                            Text("Restarted".uppercased())
+                                .bold()
+                                .foregroundStyle(.green)
+                        } else {
+                            Text("Restart".uppercased())
+                                .bold()
+                                .foregroundStyle(.secondary)
+
+                        }
+                            
+                    }
+                    .padding()
+                    .background(
+                        Color(UIColor.tertiarySystemBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    
+                    )
+                    
+                })
+                
+                //MARK: SECTION 3
+                GroupBox(label: SettingsLabelView(labelText: "Aplication".uppercased(), labelImage: "apps.iphone"), content: {
+                    
+                    
+                    SettingsRowView(name: "Developer", content: "Alfoso Patrón")
+                    SettingsRowView(name: "Designer", content: "Alfoso Patrón")
+                    SettingsRowView(name: "Compability", content: "iOS 15+")
+                    SettingsRowView(name: "Website", linkLabel: "GitHub", linkDestination: "https://github.com/Patroncito")
+                    SettingsRowView(name: "Instagram", linkLabel: "@AlfonsoPatroon", linkDestination: "https://www.instagram.com/alfonsopatroon/")
+                    SettingsRowView(name: "SwiftUI", content: "2.0")
+                    SettingsRowView(name: "Version", content: "1.0")
+                    
+                    
+                })
+
+                
+                
+            }//MARK: SCROLL
+            .padding(.horizontal, 10)
+            .navigationTitle("Settings")
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar {
                     Button{
@@ -53,4 +108,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .padding(.horizontal, 20)
 }

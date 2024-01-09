@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct FrutasApp: App {
     
-    @AppStorage("isOnboardingView") var isOnboarding: Bool = true
+    @AppStorage("isOnboardingView2") var isOnboarding: Bool = true
     
     
     var body: some Scene {
@@ -18,6 +18,7 @@ struct FrutasApp: App {
             
             if isOnboarding {
                 OnboardingView()
+             
             } else {
                 ContentView()
 
